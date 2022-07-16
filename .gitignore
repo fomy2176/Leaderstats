@@ -1,41 +1,10 @@
-# Compiled Lua sources
-luac.out
-
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
-
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
+game.Players.PlayerAdded:Connect(function(player) --L'actionneur ne peut pas être changé
+ local leaderstats = Instance.new("Folder") --"L'instance" et le nom du variable ne peut pas être changé
+ leaderstats.Name = "leaderstats" --Le nom de "leaderstats" ne peut pas être changé
+ leaderstats.Parent = player --Le parent de "leaderstats" ne peut pas être changé
+ 
+ local Money = Instance.new("IntValue") --"L'instance" ne peut pas être changé mais le nom du variable peut être changé
+ Money.Name = "Money" --Le nom de "Money" peut être changé
+ Money.Parent = leaderstats --Le parent de "Money" ne peut pas être changé
+ Money.Value = 13500 --La valeur de l'argent peut être changé
+end)
